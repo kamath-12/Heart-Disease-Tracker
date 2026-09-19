@@ -1,6 +1,8 @@
 import streamlit as st
 import joblib
 import numpy as np
+import warnings, sklearn
+warnings.filterwarnings("ignore", category=UserWarning, module="sklearn")
 
 # Load model and scaler once at the start
 model = joblib.load("heart_disease_model.pkl")
